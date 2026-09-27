@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[JEDRICK BUCTOT] HTML Practical Application Activity 2</title>
+</head>
+
+<body>
+
+  <h1 id="top">HTML Practical Application Activity</h1>
+  <p>This page demonstrates Images, Hyperlinks, Multimedia, Useful Tags, and the HTML DOM.</p>
+
+  <!-- Same-page anchor navigation, used together with the anchor link requirement in the Hyperlinks section -->
+  <nav>
+    <a href="#images-section">Images</a>
+    <a href="#hyperlinks-section">Hyperlinks</a>
+    <a href="#multimedia-section">Multimedia</a>
+    <a href="#tags-section">Useful Tags</a>
+    <a href="#dom-section">HTML DOM</a>
+  </nav>
+
+<!--1. IMAGES  ------------------------------------------------------------------------------------------------------>  <h2 id="tags-section">Useful Tags</h2>
+  <h2 id="images-section" style="color: rgb(24, 24, 165)">Images</h2>
+
+  <figure>
+    <img src="images/dog-costume.jpg" alt="A dog wearing a black wig and a floral dress, dressed up like a child" width="250">
+    <figcaption>A very committed dog cosplaying as a toddler.</figcaption>
+  </figure>
+
+  <img src="images/dog-smile-pillow.jpg" alt="A dog lying on a pillow, smiling widely and showing its teeth" width="250" height="220">
+
+  <img src="images/dog-jumping.jpg" alt="A dog jumping excitedly with its tongue out against a green background" width="200">
+
+<!--2. HYPERLINKS  ------------------------------------------------------------------------------------------------------>  <h2 id="tags-section">Useful Tags</h2>
+  <h2 id="hyperlinks-section" style="color: rgb(24, 24, 165)">Hyperlinks</h2>
+
+  <p>
+    <!-- Internal link: points to another page inside this same project -->
+    Internal link: <a href="page2.html">Go to Page 2</a><br>
+
+    <!-- External link: leaves the project and opens in a new tab -->
+    External link: <a href="https://www.w3schools.com/" target="_blank" rel="noopener">Learn Programming Using this Link</a><br>
+
+    <!-- Email link -->
+    Email link: <a href="mailto:jedrick.buctot@carsu.edu.ph">Send me an email</a><br>
+
+    <!-- Same-page anchor link: jumps to a specific id lower on this same page -->
+    Anchor link: <a href="#tags-section">Skip down to Useful Tags</a>
+  </p>
+
+<!--3. MULTIMEDIA  ------------------------------------------------------------------------------------------------------>  <h2 id="tags-section">Useful Tags</h2>
+  <h2 id="multimedia-section" style="color: rgb(24, 24, 165)">Multimedia</h2>
+
+  <p>Audio sample:</p>
+  <audio controls>
+    <source src="media/sample-audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element. You can
+    <a href="media/sample-audio.mp3">download the audio file</a> instead.
+  </audio>
+
+  <p>Video sample:</p>
+  <video controls width="400">
+    <source src="media/sample-video.mp4" type="video/mp4">
+    Your browser does not support the video element. You can
+    <a href="media/sample-video.mp4">download the video file</a> instead.
+  </video>
+
+<!--4. USEFUL TAGS  ------------------------------------------------------------------------------------------------------>  <h2 id="tags-section">Useful Tags</h2>
+
+  <!-- blockquote: used to set apart a quoted piece of text from the main content -->
+  <blockquote>
+    "The best way to learn HTML is to build something real with it."
+  </blockquote>
+
+  <!-- abbr: gives the full expansion of an abbreviation when the user hovers over it -->
+  <p>
+    I am studying <abbr title="Bachelor of Science in Information Technology">BSIT</abbr>
+    and learning the <abbr title="HyperText Markup Language">HTML</abbr> DOM this semester.
+  </p>
+
+  <!-- mark: highlights text that is especially important -->
+  <p>Studying BSIT is challenging but through<mark> effort and lifelong learning</mark> it becomes enjoyable</p>
+
+  <!-- HTML character entity: displays a copyright symbol without typing it directly -->
+  <p>&copy; 2026 Jed's HTML Activity. All rights reserved.</p>
+
+  <!--5. HTML DOM  ------------------------------------------------------------------------------------------------------>
+  <h2 id="dom-section" style="color: rgb(24, 24, 165)">HTML DOM</h2>
+
+  <p id="dom-explanation">
+    The HTML DOM (Document Object Model) represents this page as a tree of nested elements.
+    For example, this <code>&lt;section&gt;</code> below has an <code>&lt;h3&gt;</code> and a
+    <code>&lt;ul&gt;</code> as direct children, and that <code>&lt;ul&gt;</code> in turn has
+    three <code>&lt;li&gt;</code> elements as its own children.
+  </p>
+
+  <section id="dom-demo">
+    <h3 id="dom-demo-heading">Sample nested list for DOM inspection</h3>
+    <ul id="dom-demo-list">
+      <li>Parent: &lt;section id="dom-demo"&gt;</li>
+      <li>Child: &lt;h3 id="dom-demo-heading"&gt;</li>
+      <li>Child: &lt;ul id="dom-demo-list"&gt;</li>
+    </ul>
+  </section>
+
+  <p>
+    Screenshot of the DevTools Elements panel showing the DOM tree
+  </p>
+  <figure>
+    <img src="images/DOM-TREE.png.jpg" alt="Screenshot of the browser DevTools Elements panel showing the nested DOM tree of this page" width="500">
+    <figcaption>DOM tree screenshot of this page.</figcaption>
+  </figure>
+
+  <footer>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+  <!--
+    Parent-child relationship explanation (HTML DOM section requirement):
+
+    In the DOM tree for this page, the <section id="dom-demo"> element is the parent of three
+    children: an <h3 id="dom-demo-heading">, a <ul id="dom-demo-list">, and any whitespace text
+    nodes between them. The <ul id="dom-demo-list"> element is itself a parent to three <li>
+    elements, which are its direct children and siblings of one another. Going further up the
+    tree, the <body> element is the parent of every visible section on this page, including the
+    <nav>, each <h2> section, and this <section id="dom-demo">, making <body> an ancestor of
+    <ul id="dom-demo-list"> even though it is not its direct parent. This nesting is exactly what
+    was visible in the DevTools Elements panel screenshot above.
+  -->
+
+</body>
+</html>
